@@ -1,0 +1,2 @@
+html { scroll-behavior: smooth; }
+::selection { background: rgba(245, 158, 11, .35); }
