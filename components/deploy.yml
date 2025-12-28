@@ -1,0 +1,54 @@
+name: Deploy LBA IUQI App (SSR)
+
+on:
+  push:
+    tags:
+      - "v*"
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build Nuxt SSR
+        run: npm run build
+        # Env vars tidak disertakan sesuai permintaan
+
+      # STEP 1 — Upload ke HOME user (AMAN)
+      - name: Upload build to VPS (temp)
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.VPS_HOST }}
+          username: ${{ secrets.VPS_USER }}
+          key: ${{ secrets.VPS_SSH_KEY }}
+          port: 2222
+          source: ".output"
+          target: "/home/deploy/releases/lbaiuqi"
+          overwrite: true
+          rm: true
+
+      # STEP 2 — Sync ke web root & Restart PM2
+      - name: Sync to web directory & Restart
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.VPS_HOST }}
+          username: ${{ secrets.VPS_USER }}
+          key: ${{ secrets.VPS_SSH_KEY }}
+          port: 2222
+          script: |
+            # Sync isi folder .output ke direktori aplikasi
+            rsync -av --delete /home/deploy/releases/lbaiuqi/.output/ /var/www/html/app/lbaiuqi/
+            
+            # Restart PM2 (Wajib untuk SSR). Pastikan nama app di PM2 adalah 'lbaiuqi'
+            pm2 reload lbaiuqi || pm2 start /var/www/html/app/lbaiuqi/server/index.mjs --name lbaiuqi
