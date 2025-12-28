@@ -12,11 +12,6 @@ export default defineNuxtConfig({
       ]
     }
   },
-  image: {
-    ipx: {
-      sharp: false
-    }
-  },
   runtimeConfig: {
     public: {
       siteName: 'LBA IUQI',

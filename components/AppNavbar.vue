@@ -10,7 +10,7 @@ const isActive = (path: string) => route.path === path
     <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
       <NuxtLink to="/" class="flex items-center gap-3">
         <div class="w-10 h-10 rounded-xl bg-primary/10 grid place-items-center">
-          <NuxtImg src="/images/logo.png" alt="Logo LBA IUQI" class="w-6 h-6" />
+          <img src="/images/logo.png" alt="Logo LBA IUQI" class="w-6 h-6" />
         </div>
         <div>
           <h1 class="text-base md:text-lg font-bold text-primary leading-tight">LBA IUQI</h1>
