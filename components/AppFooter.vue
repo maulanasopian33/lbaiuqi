@@ -11,7 +11,7 @@ const year = new Date().getFullYear()
         <div class="xl:col-span-4 space-y-4">
           <NuxtLink to="/" class="flex items-center gap-3">
             <div class="w-10 h-10 rounded-xl bg-primary/10 grid place-items-center">
-              <NuxtImg src="/images/logo.png" alt="Logo LBA IUQI" class="w-6 h-6" />
+              <NuxtImg src="/images/logo.png" alt="Logo LBA IUQI" class="w-6 h-6" format="webp" />
             </div>
             <div>
               <h1 class="text-base font-bold text-primary leading-tight">LBA IUQI</h1>
