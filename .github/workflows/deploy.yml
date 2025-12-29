@@ -51,4 +51,4 @@ jobs:
             rsync -av --delete /home/deploy/releases/lbaiuqi/.output/ /var/www/html/app/lbaiuqi/
             
             # Restart PM2 (Wajib untuk SSR). Pastikan nama app di PM2 adalah 'lbaiuqi'
-            pm2 reload lbaiuqi
+            pm2 reload lbaiuqi-ssr

@@ -8,6 +8,10 @@ export default defineNuxtConfig({
     name: 'LBA IUQI',
     description: 'Lembaga Bahasa Asing IUQI - Tes TOEFL & TOAFL Online Resmi',
     defaultLocale: 'id',
+    indexable: true,
+  },
+  robots: {
+    disallow: ''
   },
   app: {
     head: {
