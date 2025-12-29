@@ -2,7 +2,13 @@
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
-  modules: ['@nuxt/icon', '@nuxt/image','@nuxtjs/tailwindcss'],
+  modules: ['@nuxt/icon', '@nuxt/image', '@nuxtjs/tailwindcss', '@nuxtjs/seo'],
+  site: {
+    url: 'https://lbaiuqi.com',
+    name: 'LBA IUQI',
+    description: 'Lembaga Bahasa Asing IUQI - Tes TOEFL & TOAFL Online Resmi',
+    defaultLocale: 'id',
+  },
   app: {
     head: {
       htmlAttrs: { lang: 'id' },

@@ -1,7 +1,9 @@
 <script setup lang="ts">
-usePageSeo({
+useSeoMeta({
   title: 'Kebijakan Privasi — LBA IUQI',
-  description: 'Kebijakan Privasi LBA IUQI untuk layanan TOAFL & TOEFL berbasis web.'
+  ogTitle: 'Kebijakan Privasi — LBA IUQI',
+  description: 'Kebijakan Privasi LBA IUQI untuk layanan TOAFL & TOEFL berbasis web.',
+  ogDescription: 'Kebijakan Privasi LBA IUQI untuk layanan TOAFL & TOEFL berbasis web.'
 })
 
 const updatedAt = computed(() => {

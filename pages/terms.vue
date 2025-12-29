@@ -1,7 +1,9 @@
 <script setup lang="ts">
-usePageSeo({
+useSeoMeta({
   title: 'Ketentuan Layanan — LBA IUQI',
-  description: 'Ketentuan Layanan LBA IUQI untuk penggunaan layanan TOAFL & TOEFL berbasis web.'
+  ogTitle: 'Ketentuan Layanan — LBA IUQI',
+  description: 'Ketentuan Layanan LBA IUQI untuk penggunaan layanan TOAFL & TOEFL berbasis web.',
+  ogDescription: 'Ketentuan Layanan LBA IUQI untuk penggunaan layanan TOAFL & TOEFL berbasis web.'
 })
 
 const effectiveAt = computed(() => {

@@ -1,32 +1,36 @@
 <script setup lang="ts">
 const config = useRuntimeConfig()
 
-usePageSeo({
+useSeoMeta({
   title: 'Tentang Kami — LBA IUQI',
-  description: 'Profil Lembaga Bahasa Asing IUQI (LBA IUQI), visi, misi, nilai, dan komitmen layanan.'
+  ogTitle: 'Tentang Kami — LBA IUQI',
+  description: 'Profil Lembaga Bahasa Asing IUQI (LBA IUQI), visi, misi, nilai, dan komitmen layanan.',
+  ogDescription: 'Profil Lembaga Bahasa Asing IUQI (LBA IUQI), visi, misi, nilai, dan komitmen layanan.'
 })
 
 const year = new Date().getFullYear()
 const siteUrl = (config.public.siteUrl as string) || 'https://lbaiuqi.com'
 
-const organizationSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'EducationalOrganization',
-  name: 'LBA IUQI',
-  alternateName: 'Lembaga Bahasa Asing IUQI',
-  url: siteUrl,
-  logo: `${siteUrl}/images/logo.png`,
-  description: 'Lembaga Bahasa Asing IUQI (LBA IUQI) berfokus pada layanan evaluasi kemampuan bahasa berbasis web yang profesional, aman, dan berstandar akademik.',
-  email: (config.public.contactEmail as string) || 'admin@lbaiuqi.com',
-  address: {
-    '@type': 'PostalAddress',
-    addressCountry: 'ID'
-  }
-}
+useSchemaOrg([
+  defineOrganization({
+    '@type': 'EducationalOrganization',
+    name: 'LBA IUQI',
+    alternateName: 'Lembaga Bahasa Asing IUQI',
+    logo: '/images/logo.png',
+    description: 'Lembaga Bahasa Asing IUQI (LBA IUQI) berfokus pada layanan evaluasi kemampuan bahasa berbasis web yang profesional, aman, dan berstandar akademik.',
+    email: (config.public.contactEmail as string) || 'admin@lbaiuqi.com',
+    address: {
+      '@type': 'PostalAddress',
+      addressCountry: 'ID',
+      postalCode: '16640',
+      streetAddress: 'Jl. Mohnoh Nur No.112, Leuwimekar, Kec. Leuwiliang',
+      addressLocality: 'Bogor'
+    }
+  })
+])
 </script>
 
 <template>
-  <SchemaJsonLd :content="organizationSchema" />
   <a id="top"></a>
 
   <!-- HERO -->

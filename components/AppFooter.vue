@@ -14,7 +14,7 @@ const year = new Date().getFullYear()
               <img src="/images/logo.png" alt="Logo LBA IUQI" class="w-6 h-6" />
             </div>
             <div>
-              <h1 class="text-base font-bold text-primary leading-tight">LBA IUQI</h1>
+              <div class="text-base font-bold text-primary leading-tight">LBA IUQI</div>
               <p class="text-xs text-gray-500">Lembaga Bahasa Asing</p>
             </div>
           </NuxtLink>

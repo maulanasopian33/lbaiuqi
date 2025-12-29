@@ -1,10 +1,40 @@
 <script setup lang="ts">
 const config = useRuntimeConfig()
 
-usePageSeo({
+useSeoMeta({
   title: 'LBA IUQI — Lembaga Bahasa Asing',
-  description: 'LBA IUQI menyediakan layanan ujian TOAFL & TOEFL berbasis web yang profesional, aman, dan terpercaya.'
+  ogTitle: 'LBA IUQI — Lembaga Bahasa Asing',
+  description: 'LBA IUQI menyediakan layanan ujian TOAFL & TOEFL berbasis web yang profesional, aman, dan terpercaya.',
+  ogDescription: 'LBA IUQI menyediakan layanan ujian TOAFL & TOEFL berbasis web yang profesional, aman, dan terpercaya.'
 })
+
+useSchemaOrg([
+  defineOrganization({
+    name: 'LBA IUQI',
+    logo: '/images/logo.png',
+    sameAs: ['https://lbaiuqi.com']
+  }),
+  {
+    '@type': 'Service',
+    name: 'TOAFL Online',
+    description: 'Test of Arabic as a Foreign Language (TOAFL) berbasis web untuk evaluasi kemampuan Bahasa Arab.',
+    provider: {
+      '@type': 'Organization',
+      name: 'LBA IUQI'
+    },
+    url: config.public.toaflUrl as string
+  },
+  {
+    '@type': 'Service',
+    name: 'TOEFL Online',
+    description: 'Test of English as a Foreign Language (TOEFL) berbasis web untuk evaluasi kemampuan Bahasa Inggris.',
+    provider: {
+      '@type': 'Organization',
+      name: 'LBA IUQI'
+    },
+    url: config.public.toeflUrl as string
+  }
+])
 
 const faqs = [
   {
