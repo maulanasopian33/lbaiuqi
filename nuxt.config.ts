@@ -6,12 +6,13 @@ export default defineNuxtConfig({
   site: {
     url: 'https://lbaiuqi.com',
     name: 'LBA IUQI',
-    description: 'Lembaga Bahasa Asing IUQI - Tes TOEFL & TOAFL Online Resmi',
+    description: 'Lembaga Bahasa Asing IUQI (LBA IUQI) merupakan unit resmi penyelenggara layanan TOEFL dan TOAFL berbasis web untuk kebutuhan akademik dan institusional.',
     defaultLocale: 'id',
     indexable: true,
   },
   robots: {
-    disallow: ''
+    disallow: '',
+    allow: '/',
   },
   app: {
     head: {
@@ -28,7 +29,7 @@ export default defineNuxtConfig({
       siteUrl: 'https://lbaiuqi.com',
       toaflUrl: 'https://toafl.lbaiuqi.com',
       toeflUrl: 'https://toefl.lbaiuqi.com',
-      contactEmail: 'admin@lbaiuqi.com'
+      contactEmail: 'lbaiuqi@gmail.com'
     }
   }
 })

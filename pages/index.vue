@@ -2,10 +2,10 @@
 const config = useRuntimeConfig()
 
 useSeoMeta({
-  title: 'LBA IUQI — Lembaga Bahasa Asing',
-  ogTitle: 'LBA IUQI — Lembaga Bahasa Asing',
-  description: 'LBA IUQI menyediakan layanan ujian TOAFL & TOEFL berbasis web yang profesional, aman, dan terpercaya.',
-  ogDescription: 'LBA IUQI menyediakan layanan ujian TOAFL & TOEFL berbasis web yang profesional, aman, dan terpercaya.'
+  title: 'Lembaga Bahasa Asing IUQI | TOEFL & TOAFL Resmi',
+  ogTitle: 'Lembaga Bahasa Asing IUQI | TOEFL & TOAFL Resmi',
+  description: 'Lembaga Bahasa Asing IUQI (LBA IUQI) merupakan unit resmi penyelenggara layanan TOEFL dan TOAFL berbasis web untuk kebutuhan akademik dan institusional.',
+  ogDescription: 'Lembaga Bahasa Asing IUQI (LBA IUQI) merupakan unit resmi penyelenggara layanan TOEFL dan TOAFL berbasis web untuk kebutuhan akademik dan institusional.'
 })
 
 useSchemaOrg([
@@ -71,18 +71,23 @@ const toggleFaq = (i: number) => {
     <div class="relative max-w-7xl mx-auto px-6 py-16 md:py-24 text-white">
       <div class="grid lg:grid-cols-2 gap-10 items-center">
         <div>
-          <p class="inline-flex items-center gap-2 text-xs md:text-sm bg-white/10 border border-white/15 px-3 py-1.5 rounded-full">
+          <h1 class="inline-flex items-center gap-2 text-xs md:text-sm bg-white/10 border border-white/15 px-3 py-1.5 rounded-full">
             <span class="w-2 h-2 rounded-full bg-accent"></span>
-            Platform resmi layanan ujian berbasis web
-          </p>
-
-          <h1 class="text-4xl md:text-5xl font-extrabold leading-tight mt-4">
-            Ujian Bahasa yang <span class="text-accent">Profesional</span> & Terpercaya
+            Lembaga Bahasa Asing IUQI
           </h1>
+          <h2 class="text-4xl md:text-5xl font-extrabold leading-tight mt-4">
+            Ujian Bahasa <span class="text-accent">Profesional</span> & Terpercaya
+          </h2>
 
           <p class="text-base md:text-lg text-white/90 mt-5 max-w-xl">
-            LBA IUQI menyediakan layanan <strong>TOAFL</strong> dan <strong>TOEFL</strong> berbasis web.
-            Dirancang untuk proses ujian yang terstruktur, pengalaman pengguna modern, serta kebijakan keamanan yang jelas.
+            <strong>Lembaga Bahasa Asing IUQI (LBA IUQI)</strong> merupakan unit resmi
+            yang menyelenggarakan layanan evaluasi kemampuan bahasa asing
+            berbasis web, meliputi <strong>TOAFL</strong> dan <strong>TOEFL</strong>.
+          </p>
+          <p>
+            Layanan ini digunakan untuk kebutuhan akademik dan institusional,
+            dengan sistem ujian terstruktur, pengalaman pengguna modern,
+            serta kebijakan keamanan dan privasi yang jelas.
           </p>
 
           <div class="mt-8 flex flex-col sm:flex-row gap-3">
@@ -100,6 +105,10 @@ const toggleFaq = (i: number) => {
               <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                 <path d="M7 17L17 7M17 7H9M17 7v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
+            </a>
+
+            <a href="/about" class="btn-secondary">
+              Profil Lembaga
             </a>
           </div>
 
@@ -130,7 +139,9 @@ const toggleFaq = (i: number) => {
           <div class="bg-white rounded-2xl shadow-soft p-6 md:p-8 text-gray-800 border border-gray-100">
             <h2 class="text-lg md:text-xl font-bold text-ink">Ringkasan Cepat</h2>
             <p class="text-sm text-gray-600 mt-2">
-              Pilih layanan yang dibutuhkan. Login menggunakan akun yang valid.
+               Pilih layanan evaluasi bahasa yang disediakan oleh
+                Lembaga Bahasa Asing IUQI. Akses layanan menggunakan
+                akun resmi yang terdaftar.
             </p>
 
             <div class="mt-6 grid gap-4">
@@ -209,10 +220,9 @@ const toggleFaq = (i: number) => {
   <section id="tentang" class="max-w-7xl mx-auto px-6 py-16">
     <div class="grid lg:grid-cols-12 gap-8 items-start">
       <div class="lg:col-span-5">
-        <h2 class="text-3xl md:text-4xl font-extrabold text-ink">Tentang LBA IUQI</h2>
+        <h2 class="text-3xl md:text-4xl font-extrabold text-ink">Tentang Lembaga Bahasa Asing IUQI</h2>
         <p class="mt-4 text-gray-600 leading-relaxed">
-          Lembaga Bahasa Asing IUQI (LBA IUQI) adalah unit penyelenggara layanan evaluasi kemampuan bahasa asing
-          yang memanfaatkan teknologi digital untuk proses yang lebih efisien, transparan, dan terukur.
+          Lembaga Bahasa Asing IUQI berperan sebagai penyelenggara resmi evaluasi kemampuan bahasa asing untuk kebutuhan akademik dan institusional. Sistem layanan dikembangkan untuk menjamin validitas, keamanan, dan kemudahan akses.
         </p>
         <div class="mt-6 flex flex-wrap gap-3">
           <NuxtLink to="/about" class="inline-flex items-center justify-center px-5 py-2.5 rounded-xl bg-primary text-white font-semibold hover:opacity-95">
